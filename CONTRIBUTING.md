@@ -1,18 +1,40 @@
-# Guidance on how to contribute
+# Contributing to SFSpeckit
 
-Include information that will help a contributor understand expectations and be successful, such as the examples below.
-> Want to see a good real world example? Take a look at the [CONTRIBUTING.adoc](https://github.com/spring-projects/spring-boot/blob/main/CONTRIBUTING.adoc) for spring-boot.
+Thank you for your interest in contributing to **SFSpeckit (Salesforce Spec-Kit Extension)**! Evernorth welcomes contributions from the open-source community.
 
-* Where to ask Questions? Please make sure it is SEARCHABLE
-* Who are the TC’s (Trusted Committers)?
-* How to file an Issue
-* How to file a PR
-* Dependencies
-* Style Guide / Coding standards
-* Developer Environment
-* Branching/ versioning
-* Features
-* Testing
-* Roadmap
-* Calendar
-* Links to other documentation
+## Code of Conduct
+
+All contributors are expected to uphold the [Evernorth Code of Conduct](CODE_OF_CONDUCT.md).
+
+## Getting Started
+
+1. **Prerequisites**:
+   * Node.js (v18+)
+   * Salesforce CLI (`sf` v2.0+)
+   * GitHub CLI (`gh` v2.0+)
+   * Spec-Kit CLI (`speckit` v0.4+)
+2. **Fork and Clone**:
+   * Fork the repository on GitHub.
+   * Clone your fork locally:
+     ```bash
+     git clone https://github.com/<your-username>/spec-kit-salesforce.git
+     ```
+3. **Commit Guidelines**:
+   * We follow [Conventional Commits](https://www.conventionalcommits.org/):
+     * `feat: add new command for ...`
+     * `fix: correct scoring gate logic in ...`
+     * `docs: update deployment lifecycle documentation`
+   * **Private Email Requirement**: Ensure your git commits use your GitHub noreply email address (`<username>@users.noreply.github.com`).
+
+## Developing Extension Commands
+
+* Extension commands reside under `commands/*.md`.
+* Each command must include standard YAML frontmatter with a `description`.
+* Command instructions must adhere to the 555-point quality rubric documented in `docs/scoring.md`.
+
+## Submitting a Pull Request
+
+1. Create a feature branch: `git checkout -b feat/my-new-feature`
+2. Validate changes against Salesforce DX best practices.
+3. Push to your fork and submit a PR to `main`.
+4. Ensure all CI checks (Private Email Policy, Greetings) pass.

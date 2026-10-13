@@ -1,96 +1,197 @@
-#### Github.com/Evernorth OpenSource Project Template Instructions
+<div align="center">
+  <img src="docs/assets/logo.png" width="300" alt="SFSpeckit Logo">
+  <h1>spec-kit-salesforce (SFSpeckit)</h1>
+  <p><b>Enterprise Salesforce Spec-Driven Development (SDD) Framework for GitHub Spec-Kit: AI-Powered, Human-in-the-Loop Engineering.</b></p>
 
-1. Clone the Github.com/Evernorth project repo that was created for your approved Open Source contribution by an Org admin.
-2. Copy all the *.MD from this repository to your new project. 
-3. Update the README, replacing the contents below as prescribed.
-4. Update CODEOWNERS replacing "\[ @Evernorth/team-name or each @username \]" with the expected value.
-5. Update the LICENSE and NOTICE replacing "\[ Year or Years Range of the Work \]" with the expected value.
-6. Update NOTICE replacing "\[ Project Repo Name \]" with the expected value.
-7. Delete these instructions and everything up to the _Project Title_ from the README.
-8. Write some great software and tell people about it.
+> ### 🚀 Official Community Announcement
+> SFSpeckit is the **first-ever Salesforce extension** officially accepted into the **[GitHub Spec Kit](https://github.com/github/spec-kit)** Community Catalog—the industry-leading SDD engine maintained by GitHub with over **87,000 stars**. Now proudly maintained and contributed to open source by Evernorth.
 
-> Keep the README fresh! It's the first thing people see and will make the initial impression.
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](LICENSE)
+[![Spec Kit Stars](https://img.shields.io/github/stars/github/spec-kit?style=social)](https://github.com/github/spec-kit)
+[![Official Extension](https://img.shields.io/badge/Spec--Kit-Official%20Extension-blueviolet?logo=github)](https://github.com/github/spec-kit/blob/main/extensions/catalog.community.json)
+[![Salesforce First](https://img.shields.io/badge/Salesforce-First%20Extension-00A1E0?logo=salesforce&logoColor=white)](https://github.com/github/spec-kit/pull/2208)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Evernorth-orange.svg)](https://github.com/evernorth/spec-kit-salesforce)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/evernorth/spec-kit-salesforce/pulls)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
 
-> Want to see a good real world example? Take a look at the [README](https://github.com/spring-projects/spring-boot/blob/main/README.adoc) for spring-boot.
+</div>
 
-----
+<br/>
 
-# spec-kit-salesforce
-Github Spec Kit extension for Salesforce Spec-Driven Development
+SFSpeckit transforms Salesforce delivery into an evidence-based, autonomous engine driven by structured specifications.
 
-**Description**:  Put a meaningful, short, plain-language description of what
-this project is trying to accomplish and why it matters.
-Describe the problem(s) this project solves.
-Describe how this software can improve the lives of its audience.
+---
 
-Other things to include:
+## 🏗️ Spec-Driven Development (SDD) for AI
 
-  - **Technology stack**: Indicate the technological nature of the software, including primary programming language(s) and whether the software is intended as standalone or as a module in a framework or other ecosystem.
-  - **Status**:  Alpha, Beta, 1.1, etc. It's OK to write a sentence, too. The goal is to let interested people know where this project is at. This is also a good place to link to the [CHANGELOG](CHANGELOG.md).
-  - **Links to production or demo instances**
-  - Describe what sets this apart from related-projects. Linking to another doc or page is OK if this can't be expressed in a sentence or two.
+SFSpeckit is built on the philosophy of **Spec-Driven Development (SDD)**. In the era of AI-agentic coding, jumping directly into implementation is the fastest way to hit context limits, create hallucinations, and accumulate technical debt.
 
+### The SDD Strategy:
 
-**Screenshot**: If the software has visual components, consider placing a screenshot after the description;
+`Requirements (Spec) >>> Design (Plan) >>> Implementation (Build) >>> Test >>> Deploy`
 
+> [!IMPORTANT]
+> **Human-in-the-Loop (HITL) Engineering**: SFSpeckit is a Spec-Driven Development framework that enforces human validation and verification at every milestone. This ensures that the AI remains a grounded co-pilot, eliminating hallucinations and context drift through rigorous human sign-offs.
 
-## Dependencies
+### The Tactical Lifecycle
 
-Describe any dependencies that must be installed for this software to work.
-This includes programming languages, databases or other storage mechanisms, build tools, frameworks, and so forth.
-If specific versions of other software are required, or known not to work, call that out.
+```mermaid
+graph TD
+    subgraph Spec ["1. SPEC (Define What)"]
+        C["/speckit.sf.constitution"] --> S["/speckit.sf.specify"]
+        S --> CL["/speckit.sf.clarify"]
+    end
+    subgraph Plan ["2. PLAN (Define How)"]
+        P["/speckit.sf.plan"] --> ST["/speckit.sf.stories"]
+    end
+    subgraph Build ["3. BUILD (Execute)"]
+        I["/speckit.sf.implement"] --> V["/speckit.sf.verify"]
+        V --> PR["/speckit.sf.pr"]
+    end
+    subgraph Test ["4. TEST (Validate)"]
+        QA["/speckit.sf.qa"] --> U["/speckit.sf.uat"]
+        U --> R["/speckit.sf.regression"]
+        R --> SC["/speckit.sf.score"]
+    end
+    subgraph Deploy ["5. DEPLOY (Promote)"]
+        D["/speckit.sf.deploy"]
+    end
+    Spec --> Plan --> Build --> Test --> Deploy
+```
 
-## Building from Source
+---
 
-Detailed instructions on how to build the project from source. Also note where to get pre-built distribution, if building is not required.
+## ⚡ Prerequisites
 
-## Installation
+| Requirement | Minimum Version | Required? | Purpose |
+| :--- | :--- | :--- | :--- |
+| **Node.js** | ≥ 18.0.0 | ✅ Yes | Required runtime for developer tooling and LWC Jest tests. |
+| **Salesforce CLI (`sf`)** | ≥ 2.0.0 | ✅ Yes | Core engine for all Salesforce metadata and deployments. |
+| **SF Code Analyzer** | ≥ 5.0.0 | ✅ Yes | Static analysis (PMD 7) and data-flow analysis (DFA). |
+| **GitHub CLI (`gh`)** | ≥ 2.0.0 | ⚠️ Optional | Automated Pull Request creation, checks, and release management. |
+| **DX Project** | — | ✅ Yes | Project must be an initialized Salesforce DX project (`sfdx-project.json`). |
 
-Detailed instructions on how to install, configure, and get the project running.
-This should be frequently tested to ensure reliability. Alternatively, link to
-a separate [INSTALL](INSTALL.md) document.
+---
 
-## Configuration
+## 🚀 Installation & Setup
 
-If the software is configurable, describe it in detail, either here or in other documentation to which you link.
+SFSpeckit is an officially accepted community extension for **[GitHub Spec Kit](https://github.com/github/spec-kit)**—the core engine for Spec-Driven Development, maintained by GitHub with over **87,000 stars**.
 
-## Usage
+### Step 1: Install Spec Kit CLI
 
-Show users how to use the software.
-Be specific.
-Use appropriate formatting when showing code snippets.
+You must have the core Spec Kit toolkit installed before adding SFSpeckit:
 
-## How to test the software
+```bash
+# Install Spec Kit via uv (Official Recommended Method)
+uv tool install specify-cli --from git+https://github.com/github/spec-kit.git
+```
 
-If the software includes automated tests, detail how to run those tests.
+### Step 2: Add SFSpeckit Extension
 
-## Known issues
+Once Spec Kit is installed, you can add SFSpeckit directly:
 
-Document any known significant shortcomings with the software.
+```bash
+# Add SFSpeckit to your active Salesforce project
+specify extension add sf --from https://github.com/evernorth/spec-kit-salesforce
+```
 
-## Getting help
+_For specific releases:_
 
-Instruct users how to get help with this software; this might include links to an issue tracker, wiki, mailing list, etc.
+```bash
+specify extension add sf --from https://github.com/evernorth/spec-kit-salesforce/archive/refs/tags/v1.0.0.zip
+```
 
-**Example**
+### Step 3: Automated Environment Setup
 
-If you have questions, concerns, bug reports, etc, please file an issue in this repository's Issue Tracker.
+After adding the extension, run the automated setup command. SFSpeckit will detect your OS and automatically configure your Salesforce environment:
 
-## Getting involved
+```bash
+/speckit.sf.setup
+```
 
-This section should detail why people should get involved and describe key areas you are
-currently focusing on; e.g., trying to get feedback on features, fixing certain bugs, building
-important pieces, etc.
+---
 
-General instructions on _how_ to contribute should be stated with a link to [CONTRIBUTING](CONTRIBUTING.md).
+## 📋 Slash Commands (18 Complete Lifecycle Tools)
 
-## License
-{ Project Title } is Open Source software released under the [Apache 2.0 license](https://www.apache.org/licenses/LICENSE-2.0.html).
+| Command | Persona | Purpose |
+| :--- | :--- | :--- |
+| `/speckit.sf.setup` | Dev/Arch | **[SETUP]** Automated dependency checker and installer (`sf`, `gh`, `sf-scanner`). |
+| `/speckit.sf.constitution` | TPO | **[DISCOVERY]** Establish project principles with 9 articles and org discovery. |
+| `/speckit.sf.specify` | TPO | Create functional feature specs with object maps and security models. |
+| `/speckit.sf.clarify` | Arch | **[DRIFT ALERT]** Deep gap analysis checklist and drift audit. |
+| `/speckit.sf.plan` | Arch | Technical blueprint, `force-app` structure, and blast radius analysis. |
+| `/speckit.sf.stories` | Arch | Break plan into Jira-ready developer stories with security matrices. |
+| `/speckit.sf.implement` | Dev | **[AUTO-HEAL]** Build story with automated remediation loops (up to 3 retries). |
+| `/speckit.sf.review` | TPO/Arch | TPO and Architect review of generated stories before Jira creation. |
+| `/speckit.sf.verify` | Dev | Generate formal Verification Evidence documents with coverage metrics. |
+| `/speckit.sf.pr` | Dev | Prepare PR with scoring gates and code review checklist via `gh`. |
+| `/speckit.sf.qa` | QA | Multi-persona UI validation, Jest tests, and Apex test execution. |
+| `/speckit.sf.uat` | BPO | Generate UAT scripts and manage business sign-offs. |
+| `/speckit.sf.score` | QA/Arch | 555-point real-time quality scoring dashboard across Metadata, Apex, and LWC. |
+| `/speckit.sf.deploy` | Arch | Multi-org promotion logic (Dev $\rightarrow$ QA $\rightarrow$ UAT $\rightarrow$ Prod). |
+| `/speckit.sf.change` | TPO | Handle mid-sprint requirement changes with impact analysis. |
+| `/speckit.sf.hotfix` | Dev | Emergency production patch workflow with fast-track deployment. |
+| `/speckit.sf.regression` | QA | Full feature regression tests across all stories before release. |
+| `/speckit.sf.release-notes` | TPO | Auto-generate release notes from completed stories and test results. |
 
-----
+---
 
-## Credits and references
+## 📁 Repository Structure
 
-1. Projects that inspired you
-2. Related projects
-3. Books, papers, talks, or other sources that have meaningful impact or influence on this project
+SFSpeckit organizes all SDD artifacts inside the `.specify` directory to maintain a clean project root:
+
+```text
+.specify/
+├── memory/
+│   └── constitution.md                 # Project "North Star" principles
+├── specs/                              # Feature Specifications
+│   └── 001-feature-name/
+│       ├── spec.md                     # Functional Spec
+│       ├── plan.md                     # Technical Blueprint & Blast Radius
+│       ├── verification-evidence.md    # Automated Evidence & Test Metrics
+│       └── stories/                    # Developer Work Units
+│           ├── 00-shell.md             # Mother Story (Metadata & Skeletons)
+│           └── 01-logic.md             # Implementation Story
+├── extensions/
+│   └── sf/                             # Extension Config
+│       └── sf-config.yml
+force-app/                              # Salesforce Metadata Source
+sfdx-project.json                       # Core Salesforce DX Configuration
+```
+
+---
+
+## 👨‍💻 Creator & Leadership
+
+SFSpeckit was originally conceived, designed, and architected by **Sumanth Yanamala**, a Salesforce Architect, to solve the unique challenges of the enterprise Salesforce development lifecycle.
+
+* **Original Creator**: Sumanth Yanamala ([LinkedIn](https://www.linkedin.com/in/ysumanth/))
+* **Organization**: [Evernorth](https://github.com/evernorth)
+
+---
+
+## 🌟 Giving Back
+
+This framework is a contribution to the global Salesforce community. Throughout my career, the Salesforce developer community has been a constant source of support, learning, and inspiration. SFSpeckit is shared as a way to give back to the ecosystem and the people that have shaped this journey.
+
+---
+
+## ❤️ Special Thanks
+
+This project is the result of months of architecture and testing. I want to extend my deepest gratitude to my wife, **Srija**, for her unwavering support, understanding, and patience throughout this journey. This project would not have been possible without her.
+
+---
+
+## 🤝 Community & Governance
+
+* **Contributing**: Please review our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
+* **Security**: For responsible disclosure of security vulnerabilities, see [SECURITY.md](SECURITY.md).
+* **Changelog**: All notable releases are documented in [CHANGELOG.md](CHANGELOG.md).
+
+---
+
+## ⚖️ License
+
+Released by **Evernorth Strategic Development, Inc.** under the **[Apache License 2.0](LICENSE)**.
+
+Original work copyright © 2026 Sumanth Yanamala (MIT License). See [NOTICE](NOTICE) for full attribution details.

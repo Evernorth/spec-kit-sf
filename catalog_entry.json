@@ -1,0 +1,46 @@
+{
+  "sf": {
+    "name": "SFSpeckit — Salesforce Spec-Driven Development",
+    "id": "sf",
+    "description": "Enterprise-Grade Spec-Driven Development (SDD) Framework for Salesforce.",
+    "author": "Sumanth Yanamala / Evernorth",
+    "version": "1.0.0",
+    "download_url": "https://github.com/evernorth/spec-kit-salesforce/archive/refs/tags/v1.0.0.zip",
+    "repository": "https://github.com/evernorth/spec-kit-salesforce",
+    "homepage": "https://github.com/evernorth/spec-kit-salesforce",
+    "documentation": "https://github.com/evernorth/spec-kit-salesforce/blob/main/docs/introduction.html",
+    "changelog": "https://github.com/evernorth/spec-kit-salesforce/blob/main/CHANGELOG.md",
+    "license": "Apache-2.0",
+    "requires": {
+      "speckit_version": ">=0.4.0",
+      "tools": [
+        {
+          "name": "sf",
+          "version": ">=2.0.0",
+          "required": true
+        },
+        {
+          "name": "gh",
+          "version": ">=2.0.0",
+          "required": false
+        }
+      ]
+    },
+    "provides": {
+      "commands": 18,
+      "hooks": 2
+    },
+    "tags": [
+      "salesforce",
+      "enterprise",
+      "sdlc",
+      "apex",
+      "devops"
+    ],
+    "verified": false,
+    "downloads": 0,
+    "stars": 0,
+    "created_at": "2026-04-13T22:11:30Z",
+    "updated_at": "2026-04-13T22:11:30Z"
+  }
+}
