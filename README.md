@@ -10,6 +10,7 @@
 [![Spec Kit Stars](https://img.shields.io/github/stars/github/spec-kit?style=social)](https://github.com/github/spec-kit)
 [![Official Extension](https://img.shields.io/badge/Spec--Kit-Official%20Extension-blueviolet?logo=github)](https://github.com/github/spec-kit/blob/main/extensions/catalog.community.json)
 [![Salesforce First](https://img.shields.io/badge/Salesforce-First%20Extension-00A1E0?logo=salesforce&logoColor=white)](https://github.com/github/spec-kit/pull/2208)
+[![Featured at Dreamforce '26](docs/assets/badges/dreamforce.svg)](https://www.salesforce.com/plus/experience/dreamforce_2026/series/developers_at_dreamforce_2026/episode/episode-s1e17)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Evernorth-orange.svg)](https://github.com/Evernorth/spec-kit-sf)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Evernorth/spec-kit-sf/pulls)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
