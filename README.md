@@ -115,7 +115,7 @@ After adding the extension, run the automated setup command. SFSpeckit will dete
 
 | Command | Persona | Purpose |
 | :--- | :--- | :--- |
-| `/speckit.sf.setup` | Dev/Arch | **[SETUP]** Automated dependency checker and installer (`sf`, `gh`, `sf-scanner`). |
+| `/speckit.sf.setup` | Dev/Arch | **[SETUP]** Automated dependency checker and installer (`sf`, `gh`, `code-analyzer`). |
 | `/speckit.sf.constitution` | TPO | **[DISCOVERY]** Establish project principles with 9 articles and org discovery. |
 | `/speckit.sf.specify` | TPO | Create functional feature specs with object maps and security models. |
 | `/speckit.sf.clarify` | Arch | **[DRIFT ALERT]** Deep gap analysis checklist and drift audit. |

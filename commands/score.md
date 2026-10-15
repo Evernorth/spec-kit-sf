@@ -36,7 +36,7 @@ For each story, extract scores from the **Scoring Gates** section:
 - **Flow score** (X/110)
 - **LWC score** (X/165)
 - **Testing coverage** (X%)
-- **Security scanner** (violations count)
+- **Code Analyzer** (violations count)
 
 ### Step 3: Calculate Feature-Level Scores
 
@@ -47,7 +47,7 @@ Aggregate across all stories:
 
 ### Per-Story Breakdown
 
-| Story | Metadata | Apex | Flow | LWC | Coverage | Scanner | Total |
+| Story | Metadata | Apex | Flow | LWC | Coverage | Code Analyzer | Total |
 |-------|----------|------|------|-----|----------|---------|-------|
 | 00 | 98/120 | — | — | — | 95% | 0 Sev1 | 98 |
 | 01 | 105/120 | 135/150 | — | 148/165 | 92% | 0 Sev1 | 388 |

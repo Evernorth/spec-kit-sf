@@ -1,5 +1,5 @@
 ---
-description: "Automated dependency checker and installer (sf, gh, sf-scanner)."
+description: "Automated dependency checker and installer (sf, gh, code-analyzer)."
 ---
 
 # Environment Setup
@@ -34,12 +34,13 @@ Identify whether the user is on **macOS**, **Windows**, or **Linux**.
    - **Windows**: Suggest `winget install GitHub.cli`
    - Ask for permission to run the install command.
 
-### Step 4: Check SF Code Analyzer (`sf-scanner`)
+### Step 4: Check SF Code Analyzer (`@salesforce/plugin-code-analyzer`)
 
-1. Run: `sf plugins inspect @salesforce/sfdx-scanner`
-2. If found: Report version. Ensure version is ≥ 5.0.0 for PMD 7 support.
-3. If NOT found or version is < 5.0.0:
-   - Suggest: `sf plugins install @salesforce/sfdx-scanner@latest`
+1. Run: `sf plugins inspect @salesforce/plugin-code-analyzer`
+2. If found: Report version (Code Analyzer v5).
+3. If NOT found or legacy `sfdx-scanner` is installed:
+   - Inform the user: "Code Analyzer v4 (`sfdx-scanner`) was retired in August 2025. SFSpeckit requires modern Code Analyzer v5 (`@salesforce/plugin-code-analyzer`)."
+   - Suggest: `sf plugins install @salesforce/plugin-code-analyzer`
    - Ask for permission to run the install command.
 
 ### Step 5: Verify Permissions & Login

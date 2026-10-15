@@ -68,11 +68,13 @@ site
 # vscode database functionality support files
 *.session.sql
 
-# Spec-kit runtime cache & local registry (must not be committed)
+# Spec-kit runtime cache, logs & local registry (must not be committed)
 .specify/extensions/.cache/
 .specify/extensions/.backup/
 .specify/extensions/*/*.local.yml
 .specify/extensions/.registry
+.specify/logs/
+.specify/specs/*/test-logs/
 
 # Migration assessment documentation (local only)
 migration-assessment/

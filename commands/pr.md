@@ -26,42 +26,42 @@ Load extension config from `.specify/extensions/sf/sf-config.yml` if it exists.
 - Story status is **IMPLEMENTED** (completed by `/speckit.sf.implement`)
 - Story branch exists
 - All implementation layers are marked `[x]` in the story file
-- Salesforce Code Analyzer plugin installed: `sf plugins install @salesforce/sfdx-scanner`
+- Salesforce Code Analyzer plugin installed: `sf plugins install @salesforce/plugin-code-analyzer`
 - **Verification Evidence** exists: `.specify/specs/[feature]/test-logs/story-$ID-verify.md`
 
 ## Instructions
 
 ### Step 1: Check Code Analyzer
 
-1. Verify if `sf scanner run` is available.
+1. Verify if `sf code-analyzer run` is available.
 2. If NOT available:
-   - Prompt: "Salesforce Code Analyzer is not installed. Would you like to install it now?"
+   - Prompt: "Salesforce Code Analyzer v5 is not installed. Would you like to install it now via `sf plugins install @salesforce/plugin-code-analyzer`?"
    - **WARNING: Proceeding without the Code Analyzer is a SECURITY RISK.**
 
 ### Step 2: Run All Scoring Gates
 
 Evaluate the implementation using the **Best Practices Checklist** in `docs/scoring.md`.
 
-**Security Scan (Scanner)**:
-- Run: `sf scanner run --target "force-app/" --engine pmd,eslint-lwc`
+**Security Scan (Code Analyzer v5)**:
+- Run: `sf code-analyzer run --target "force-app/"`
 - **Mandatory Gate**: ZERO Severity 1 (Critical) or Severity 2 (High) violations.
 - If violations exist → STOP and inform developer.
 
 **Metadata scoring** (if story has metadata): Target ≥ 84/120
 
 **Apex scoring** (if story has Apex):
-- **Scanner Penalty**: -10 points for every Severity 3 (Moderate) PMD violation.
+- **Code Analyzer Penalty**: -10 points for every Severity 3 (Moderate) violation.
 - Check: Bulkification, Security, No hardcoded IDs, Error handling, SOLID principles.
 - Target: ≥ 90/150
 
 **LWC scoring** (if story has LWC):
-- **Scanner Penalty**: -5 points for every ESLint violation.
+- **Code Analyzer Penalty**: -5 points for every ESLint violation.
 - Check: SLDS 2 compliance, Accessibility, Performance.
 - Target: ≥ 125/165
 
-**Data Flow Analysis (Architect-Ready Scan)**:
-- Run: `sf scanner run dfa --target "force-app/main/default/classes" --projectdir "force-app/"`
-- Any high-risk DFA finding must be documented in the PR description.
+**Deep Analysis (Architect-Ready Scan)**:
+- Run: `sf code-analyzer run --target "force-app/main/default/classes"`
+- Any high-risk finding must be documented in the PR description.
 
 ### Step 3: Generate PR Description
 

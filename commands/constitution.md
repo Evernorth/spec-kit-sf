@@ -55,13 +55,17 @@ Check if `.specify/memory/constitution.md` already exists.
    sf org list metadata --metadata-type ExternalService --json
    sf org list metadata --metadata-type ApexClass --json
    sf org list metadata --metadata-type Flow --json
-   sf org display --json
+   sf org list limits --json
    ```
+
+   > [!CAUTION]
+   > **Credential Security Guardrail**: Never run raw `sf org display` or expose active `accessToken` / session tokens to the LLM or generated documentation. If basic org info (org ID, edition) is required, use `sf org list --json` which omits bearer session tokens.
+
 2. **Analyze Results**:
    - **Packages**: Identify key frameworks (fflib, TAF) or industry clouds (CPQ, FSC).
    - **Integrations**: Map modern (External Service) vs. legacy endpoints.
    - **Maturity (Article III)**: Calculate ratio of Active Flows vs. Apex Classes. If Flows > Apex, set "Flow-centric" posture. If Apex > Flows, set "Technical Debt reduction" posture.
-   - **Org Limits**: Check AI/Agent limits if Agentforce is in scope.
+   - **Org Limits**: Check AI/Agent limits via `sf org list limits --json` if Agentforce is in scope.
 
 ### Step 3: Gather Project-Specific Context
 

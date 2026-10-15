@@ -61,7 +61,7 @@ Even for hotfixes, verify:
 - [ ] No credentials exposed
 
 ```bash
-sf scanner run --target "force-app/main/default/classes/[ChangedFile].cls" --engine pmd
+sf code-analyzer run --target "force-app/main/default/classes/[ChangedFile].cls"
 ```
 
 ### Step 6: Deploy to Production

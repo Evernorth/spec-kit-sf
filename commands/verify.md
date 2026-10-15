@@ -54,21 +54,28 @@ sf apex run test \
   --target-org dev
 ```
 
-### Step 3.5: Runtime Telemetry Analysis (Log Observation)
+### Step 3.5: Runtime Telemetry Analysis (Structured Test Metrics)
 
-**ENSURES SCALABILITY.** Don't just check IF it passed; check HOW it passed.
+**ENSURES SCALABILITY & COMPLIANCE.** Evaluate performance and assertions directly from the structured test execution results.
 
-1. **Identify Slowest Test Methods** from the JSON results.
-2. **Pull Debug Logs**:
-   ```bash
-   sf apex get log --log-id [LogId] --target-org dev
-   ```
-3. **Parse for Bottlenecks**:
-   - **SOQL Count**: >60 per transaction = warning
-   - **CPU Time**: >1000ms = warning
-   - **DML Rows**: >150 rows in unit tests = warning
+> [!IMPORTANT]
+> **HIPAA & PHI/PII Protection Guardrail**:
+> - Never pull or persist raw Apex execution debug logs (`sf apex get log`). In enterprise healthcare environments, debug logs can capture record data, sensitive parameters, or PHI/PII.
+> - All required verification telemetry (test outcomes, execution time per test method, assertion messages, stack traces on failure, and code coverage percentages) is parsed directly from the structured JSON result (`.specify/logs/tests/test-result-*.json`).
+> - Verification commands must only be executed against isolated Scratch Orgs or Developer Sandboxes using synthetic, mocked test data (`SeeAllData=false`).
 
-Record in the **Runtime Telemetry** section.
+1. **Parse Test Run Results**:
+   - Inspect `.specify/logs/tests/test-result-*.json` (or CLI JSON output) for:
+     - `summary.testsRan`, `summary.passing`, `summary.failing`
+     - Failing assertions and exception stack traces under `tests[].message` and `tests[].stackTrace`
+     - Execution time per method (`tests[].time`) to flag slow unit tests (>1000ms)
+     - Aggregated code coverage per class from `coverage.coverage`
+
+2. **Evaluate Performance Limits**:
+   - Review method execution times: >1000ms = warning.
+   - For failing tests: The exact assertion error, failing class, and line number are parsed from the test result payload to feed the auto-heal loop without needing raw debug logs.
+
+Record these metrics in the **Runtime Telemetry** section.
 
 ### Step 4: Run LWC Jest Tests (if applicable)
 
@@ -115,7 +122,7 @@ Create: `.specify/specs/[feature-dir]/test-logs/story-$ID-verify.md`
 
 List any test method taking longer than **1.0 second**.
 
-## 5. Security Scanner Snapshot
+## 5. Code Analyzer Snapshot (v5)
 
 - **Severity 1 (Critical)**: 0
 - **Severity 2 (High)**: 0

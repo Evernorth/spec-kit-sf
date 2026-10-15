@@ -17,7 +17,7 @@ If you discover a security vulnerability within this project, please **DO NOT** 
 
 Instead, please submit a responsible disclosure report to the Evernorth Security Team:
 
-* **Email**: [opensource-security@evernorth.com](mailto:opensource-security@evernorth.com)
+* **Email**: [opensource@evernorth.com](mailto:opensource@evernorth.com)
 * **Alternative**: Report via GitHub's Private Vulnerability Reporting feature on this repository.
 
 ### What to Include in Your Report

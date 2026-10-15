@@ -36,7 +36,7 @@ Load extension config from `.specify/extensions/sf/sf-config.yml` if it exists.
 - Plan exists in the same feature directory
 - Dependencies are met (Story-000 must be DONE for non-foundation stories)
 - Developer has authenticated to Dev Sandbox: `sf org login web --alias dev`
-- Salesforce Code Analyzer plugin installed: `sf plugins install @salesforce/sfdx-scanner`
+- Salesforce Code Analyzer plugin installed: `sf plugins install @salesforce/plugin-code-analyzer`
 
 ## Instructions
 
@@ -67,9 +67,9 @@ Create the story branch from the feature branch. If the feature branch exists an
 
 ### Step 5: Check Code Analyzer
 
-1. Verify if `sf scanner run` is available.
+1. Verify if `sf code-analyzer run` is available.
 2. If NOT available:
-   - Prompt: "Salesforce Code Analyzer is not installed. Would you like to install it now?"
+   - Prompt: "Salesforce Code Analyzer v5 is not installed. Would you like to install it now via `sf plugins install @salesforce/plugin-code-analyzer`?"
    - **WARNING: Proceeding without the Code Analyzer is a SECURITY RISK.**
 
 ### Step 6: Implement Layers in Deployment Order
@@ -87,7 +87,7 @@ For each layer below, first consult the **Best Practices Checklist** in `docs/sc
 - Create test classes following PNB pattern (Article V)
 - Mark `[ ]` → `[x]` in the story's layer table
 - **Scoring gate**: Must meet Apex minimum threshold
-- **Scanner gate**: Run `sf scanner run --target "force-app/main/default/classes/*.cls" --engine pmd`
+- **Code Analyzer gate**: Run `sf code-analyzer run --target "force-app/main/default/classes"`
   - Requirement: **Zero Severity 1 (Critical)** violations.
 
 #### Phase 3: Flow (if applicable)
@@ -101,7 +101,7 @@ For each layer below, first consult the **Best Practices Checklist** in `docs/sc
 - Create Jest test files in `__tests__/` directory
 - Ensure SLDS 2 compliance, keyboard accessibility
 - Mark `[ ]` → `[x]` in the story's layer table
-- **Scanner gate**: Run `sf scanner run --target "force-app/main/default/lwc/" --engine eslint-lwc`
+- **Code Analyzer gate**: Run `sf code-analyzer run --target "force-app/main/default/lwc/"`
 
 ### Step 7: Run Full Story Tests
 

@@ -27,7 +27,7 @@ provides:
     # === Foundation ===
     - name: "speckit.sf.setup"
       file: "commands/setup.md"
-      description: "Automated dependency checker and installer (sf, gh, sf-scanner)."
+      description: "Automated dependency checker and installer (sf, gh, code-analyzer)."
 
     - name: "speckit.sf.constitution"
       file: "commands/constitution.md"

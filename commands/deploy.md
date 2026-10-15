@@ -53,10 +53,13 @@ If any prerequisite fails → STOP and report what's missing.
 
 1. Read the plan: `.specify/specs/NNN-feature-name/plan.md`
 2. Read `sfdx-project.json` for source paths
-3. Confirm target org:
+3. Confirm target org connection (safe, non-sensitive verification):
    ```bash
-   sf org display --target-org $TARGET_ENV
+   sf config get target-org
+   sf org list --target-org $TARGET_ENV
    ```
+   > [!CAUTION]
+   > **Credential Security Guardrail**: Never run raw `sf org display` without masking. Do not print or persist the live Salesforce `accessToken` into LLM context, console output, or deployment logs.
 
 ### Step 3: Dry-Run Validation
 

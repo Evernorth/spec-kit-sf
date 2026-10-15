@@ -27,4 +27,4 @@ Once installed, execute the automated environment setup command:
 This command inspects your local environment for required tools:
 1. **Salesforce CLI (`sf`)**: Minimum version 2.0.0
 2. **GitHub CLI (`gh`)**: Minimum version 2.0.0
-3. **Salesforce Code Analyzer (`sf-scanner`)**: Version 5.x with PMD 7 and DFA
+3. **Salesforce Code Analyzer (`@salesforce/plugin-code-analyzer`)**: Version 5.x with PMD 7 and DFA
