@@ -8,11 +8,8 @@ All contributors are expected to uphold the [Evernorth Code of Conduct](CODE_OF_
 
 ## Getting Started
 
-1. **Prerequisites**:
-   * Node.js (v18+)
-   * Salesforce CLI (`sf` v2.0+)
-   * GitHub CLI (`gh` v2.0+)
-   * Spec-Kit CLI (`speckit` v0.4+)
+1. **Prerequisites & Setup**:
+   * See the [README Prerequisites & Installation](README.md#prerequisites) sections for required tooling and local setup instructions.
 2. **Fork and Clone**:
    * Fork the repository on GitHub.
    * Clone your fork locally:
