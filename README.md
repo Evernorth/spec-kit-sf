@@ -166,18 +166,18 @@ sfdx-project.json                       # Core Salesforce DX Configuration
 
 ---
 
+## 🤝 Community & Governance
+
+* **Contributing**: Please review our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
+* **Changelog**: All notable releases are documented in [CHANGELOG.md](CHANGELOG.md).
+
+---
+
 ## 👥 Original Contributors
 
 * **Sumanth Yanamala**, Salesforce Architect, Evernorth
 
 This framework is a contribution to the global Salesforce community. SFSpeckit is shared as a way to give back to the ecosystem.
-
----
-
-## 🤝 Community & Governance
-
-* **Contributing**: Please review our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
-* **Changelog**: All notable releases are documented in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
