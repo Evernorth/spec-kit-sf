@@ -7,13 +7,13 @@ SFSpeckit can be installed into any Salesforce DX project using the GitHub Spec-
 Run the following command in your Salesforce DX project root:
 
 ```bash
-specify extension add sf --from https://github.com/evernorth/spec-kit-salesforce
+specify extension add sf --from https://github.com/evernorth/spec-kit-sf
 ```
 
 For specific tagged versions:
 
 ```bash
-specify extension add sf --from https://github.com/evernorth/spec-kit-salesforce/archive/refs/tags/v1.0.0.zip
+specify extension add sf --from https://github.com/evernorth/spec-kit-sf/archive/refs/tags/v1.0.0.zip
 ```
 
 ## Automated Environment Verification

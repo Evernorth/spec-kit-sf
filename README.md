@@ -1,6 +1,6 @@
 <div align="center">
   <img src="docs/assets/logo.png" width="300" alt="SFSpeckit Logo">
-  <h1>spec-kit-salesforce (SFSpeckit)</h1>
+  <h1>spec-kit-sf (SFSpeckit)</h1>
   <p><b>Enterprise Salesforce Spec-Driven Development (SDD) Framework for GitHub Spec-Kit: AI-Powered, Human-in-the-Loop Engineering.</b></p>
 
 > ### 🚀 Official Community Announcement
@@ -10,8 +10,8 @@
 [![Spec Kit Stars](https://img.shields.io/github/stars/github/spec-kit?style=social)](https://github.com/github/spec-kit)
 [![Official Extension](https://img.shields.io/badge/Spec--Kit-Official%20Extension-blueviolet?logo=github)](https://github.com/github/spec-kit/blob/main/extensions/catalog.community.json)
 [![Salesforce First](https://img.shields.io/badge/Salesforce-First%20Extension-00A1E0?logo=salesforce&logoColor=white)](https://github.com/github/spec-kit/pull/2208)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Evernorth-orange.svg)](https://github.com/evernorth/spec-kit-salesforce)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/evernorth/spec-kit-salesforce/pulls)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Evernorth-orange.svg)](https://github.com/evernorth/spec-kit-sf)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/evernorth/spec-kit-sf/pulls)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
 
 </div>
@@ -75,8 +75,6 @@ graph TD
 
 ## 🚀 Installation & Setup
 
-SFSpeckit is an officially accepted community extension for **[GitHub Spec Kit](https://github.com/github/spec-kit)**—the core engine for Spec-Driven Development, maintained by GitHub with over **87,000 stars**.
-
 ### Step 1: Install Spec Kit CLI
 
 You must have the core Spec Kit toolkit installed before adding SFSpeckit:
@@ -92,13 +90,13 @@ Once Spec Kit is installed, you can add SFSpeckit directly:
 
 ```bash
 # Add SFSpeckit to your active Salesforce project
-specify extension add sf --from https://github.com/evernorth/spec-kit-salesforce
+specify extension add sf --from https://github.com/evernorth/spec-kit-sf
 ```
 
 _For specific releases:_
 
 ```bash
-specify extension add sf --from https://github.com/evernorth/spec-kit-salesforce/archive/refs/tags/v1.0.0.zip
+specify extension add sf --from https://github.com/evernorth/spec-kit-sf/archive/refs/tags/v1.0.0.zip
 ```
 
 ### Step 3: Automated Environment Setup

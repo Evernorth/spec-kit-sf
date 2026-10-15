@@ -17,7 +17,7 @@ All contributors are expected to uphold the [Evernorth Code of Conduct](CODE_OF_
    * Fork the repository on GitHub.
    * Clone your fork locally:
      ```bash
-     git clone https://github.com/<your-username>/spec-kit-salesforce.git
+     git clone https://github.com/<your-username>/spec-kit-sf.git
      ```
 3. **Commit Guidelines**:
    * We follow [Conventional Commits](https://www.conventionalcommits.org/):
