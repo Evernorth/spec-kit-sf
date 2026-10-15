@@ -8,12 +8,6 @@ description: "Implement a story file with auto-heal loop and scoring gates."
 
 $ARGUMENTS
 
-# Implement a Developer Story
-
-## User Input
-
-$ARGUMENTS
-
 ## Supplemental Skill Discovery (Optional)
 
 Before executing, you may check for any installed agent skills related to:
@@ -22,8 +16,6 @@ Before executing, you may check for any installed agent skills related to:
 
 > [!NOTE]
 > These skills are **Optional Accelerators**. If found, use them to assist implementation and scoring. However, the standards in `docs/scoring.md` are the **primary source of truth**.
-
-## Prerequisites
 
 ## Extension Configuration
 
