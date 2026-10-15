@@ -99,13 +99,20 @@ _For specific releases:_
 specify extension add sf --from https://github.com/evernorth/spec-kit-sf/archive/refs/tags/v1.0.0.zip
 ```
 
-### Step 3: Automated Environment Setup
+### Step 3: Automated Environment Setup & Verification
 
-After adding the extension, run the automated setup command. SFSpeckit will detect your OS and automatically configure your Salesforce environment:
+After adding the extension, run the automated setup command inside your Salesforce DX project. SFSpeckit will detect your OS, inspect your local environment, and verify (or prompt to install) all required tooling:
 
 ```bash
 /speckit.sf.setup
 ```
+
+#### Environment Verification Checklist
+
+The `/speckit.sf.setup` command automatically inspects and validates:
+1. **Salesforce CLI (`sf`)**: Minimum version `2.0.0` — Core engine for Salesforce metadata retrieval, deployments, and org operations.
+2. **Salesforce Code Analyzer (`@salesforce/plugin-code-analyzer`)**: Version `5.x` — PMD 7 and Graph Engine (DFA) static analysis rules.
+3. **GitHub CLI (`gh`)**: Minimum version `2.0.0` _(Optional)_ — Automated pull request creation, checks, and release management.
 
 ---
 
