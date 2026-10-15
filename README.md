@@ -28,7 +28,7 @@ SFSpeckit was featured in Salesforce's Dreamforce 2026 session, **"Explore the A
 
 The session covered Salesforce's evolving approach to agentic application development, including Spec-Driven Development and AI-assisted developer workflows.
 
-🎥 **[Watch the Dreamforce 2026 session on Salesforce+](https://www.salesforce.com/plus/experience/dreamforce_2026/series/developers_at_dreamforce_2026)**
+🎥 **[Watch the Dreamforce 2026 session on Salesforce+](https://www.salesforce.com/plus/experience/dreamforce_2026/series/developers_at_dreamforce_2026/episode/episode-s1e17)**
 
 * **Session:** Explore the Agentic App Dev Roadmap
 * **Dreamforce:** 2026
