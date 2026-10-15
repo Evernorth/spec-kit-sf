@@ -10,8 +10,8 @@
 [![Spec Kit Stars](https://img.shields.io/github/stars/github/spec-kit?style=social)](https://github.com/github/spec-kit)
 [![Official Extension](https://img.shields.io/badge/Spec--Kit-Official%20Extension-blueviolet?logo=github)](https://github.com/github/spec-kit/blob/main/extensions/catalog.community.json)
 [![Salesforce First](https://img.shields.io/badge/Salesforce-First%20Extension-00A1E0?logo=salesforce&logoColor=white)](https://github.com/github/spec-kit/pull/2208)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Evernorth-orange.svg)](https://github.com/evernorth/spec-kit-sf)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/evernorth/spec-kit-sf/pulls)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Evernorth-orange.svg)](https://github.com/Evernorth/spec-kit-sf)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Evernorth/spec-kit-sf/pulls)
 [![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
 
 </div>
@@ -90,13 +90,13 @@ Once Spec Kit is installed, you can add SFSpeckit directly:
 
 ```bash
 # Add SFSpeckit to your active Salesforce project
-specify extension add sf --from https://github.com/evernorth/spec-kit-sf
+specify extension add sf --from https://github.com/Evernorth/spec-kit-sf
 ```
 
 _For specific releases:_
 
 ```bash
-specify extension add sf --from https://github.com/evernorth/spec-kit-sf/archive/refs/tags/v1.0.0.zip
+specify extension add sf --from https://github.com/Evernorth/spec-kit-sf/archive/refs/tags/v1.0.0.zip
 ```
 
 ### Step 3: Automated Environment Setup & Verification
@@ -166,37 +166,21 @@ sfdx-project.json                       # Core Salesforce DX Configuration
 
 ---
 
-## 👨‍💻 Creator & Leadership
+## 👥 Original Contributors
 
-SFSpeckit was originally conceived, designed, and architected by **Sumanth Yanamala**, a Salesforce Architect, to solve the unique challenges of the enterprise Salesforce development lifecycle.
+* **Sumanth Yanamala**, Salesforce Architect, Evernorth
 
-* **Original Creator**: Sumanth Yanamala ([LinkedIn](https://www.linkedin.com/in/ysumanth/))
-* **Organization**: [Evernorth](https://github.com/evernorth)
-
----
-
-## 🌟 Giving Back
-
-This framework is a contribution to the global Salesforce community. Throughout my career, the Salesforce developer community has been a constant source of support, learning, and inspiration. SFSpeckit is shared as a way to give back to the ecosystem and the people that have shaped this journey.
-
----
-
-## ❤️ Special Thanks
-
-This project is the result of months of architecture and testing. I want to extend my deepest gratitude to my wife, **Srija**, for her unwavering support, understanding, and patience throughout this journey. This project would not have been possible without her.
+This framework is a contribution to the global Salesforce community. SFSpeckit is shared as a way to give back to the ecosystem.
 
 ---
 
 ## 🤝 Community & Governance
 
 * **Contributing**: Please review our [Contributing Guidelines](CONTRIBUTING.md) and [Code of Conduct](CODE_OF_CONDUCT.md).
-* **Security**: For responsible disclosure of security vulnerabilities, see [SECURITY.md](SECURITY.md).
 * **Changelog**: All notable releases are documented in [CHANGELOG.md](CHANGELOG.md).
 
 ---
 
 ## ⚖️ License
 
-Released by **Evernorth Strategic Development, Inc.** under the **[Apache License 2.0](LICENSE)**.
-
-Original work copyright © 2026 Sumanth Yanamala (MIT License). See [NOTICE](NOTICE) for full attribution details.
+SFSpeckit is Open Source software released under the [Apache 2.0 license](LICENSE).
