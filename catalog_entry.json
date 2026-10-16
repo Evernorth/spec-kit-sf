@@ -8,7 +8,7 @@
     "download_url": "https://github.com/Evernorth/spec-kit-sf/archive/refs/tags/v1.0.0.zip",
     "repository": "https://github.com/Evernorth/spec-kit-sf",
     "homepage": "https://github.com/Evernorth/spec-kit-sf",
-    "documentation": "https://github.com/Evernorth/spec-kit-sf/blob/main/docs/introduction.html",
+    "documentation": "https://github.com/Evernorth/spec-kit-sf#readme",
     "changelog": "https://github.com/Evernorth/spec-kit-sf/blob/main/CHANGELOG.md",
     "license": "Apache-2.0",
     "requires": {

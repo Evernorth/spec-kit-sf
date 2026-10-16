@@ -74,6 +74,65 @@ graph TD
     Spec --> Plan --> Build --> Test --> Deploy
 ```
 
+### 💡 The SDD Advantage
+
+| Capability | Raw AI Chat / Prompting | SFSpeckit SDD Engine |
+| :--- | :--- | :--- |
+| **Context Management** | Lost in chat history (Context Drift) | Grounded in central `.specify/` specifications |
+| **Error Correction** | Manual copy-pasting of error traces | Autonomous CLI Auto-Healing test loop |
+| **Code Governance** | Inconsistent coding styles & hallucinations | Enforced 555-point rubric & Constitution |
+| **Team Scalability** | Single-developer silo | Parallel multi-developer execution via Story 00 |
+
+### 📜 The 9 Architectural Guardrails (Constitution)
+
+When `/speckit.sf.constitution` runs, it establishes 9 enterprise articles that govern all downstream AI generations:
+
+1. **Metadata-First**: Schema and fields must exist before business logic is generated.
+2. **Bulk-Awareness**: Every Apex method must process 201+ records by default without hitting governor limits.
+3. **Declarative-First**: Flow is prioritized for standard automations; Apex is reserved for complex processing.
+4. **Absolute Security**: Strict enforcement of `with sharing`, FLS striping, and CRUD checks.
+5. **PNB Unit Testing**: Positive, Negative, and Boundary (PNB) test cases are required for every story.
+6. **Separation of Concerns**: Strict architectural layering (Triggers → Handlers → Services → Selectors).
+7. **Deployment Safety**: Zero org-drift tolerance; validation deployments required prior to merge.
+8. **Platform Context**: Explicit governor-limit profiling across asynchronous and synchronous boundaries.
+9. **Modular Logic**: Single-responsibility, reusable Apex classes and isolated LWC components.
+
+---
+
+## 👥 SDD Workflow & Role Matrix
+
+SFSpeckit structures the Salesforce delivery lifecycle into 5 distinct phases with clear human-in-the-loop accountability across 15 automated commands:
+
+| Phase | Stage | Command | Accountable Role | Purpose & Milestone Gate |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Spec** | 01. Constitution | `/speckit.sf.constitution` | **Architect / TPO** | North Star: Project guardrails, governor limits & metadata conventions |
+| | 02. Specify | `/speckit.sf.specify` | **Technical Product Owner (TPO)** | Functional requirements engineering (What the business needs) |
+| | 03. Clarify | `/speckit.sf.clarify` | **TPO + Architect** | Reality check: Live org drift detection & requirement gap analysis |
+| **2. Plan** | 04. Plan | `/speckit.sf.plan` | **Salesforce Architect** | Technical blueprinting, class/flow mapping & blast radius analysis |
+| | 05. Stories | `/speckit.sf.stories` | **Salesforce Architect** | Atomic decomposition into self-contained `.story` units |
+| | 06. Review | `/speckit.sf.review` | **TPO + Architect** | HITL gate: Human sign-off on architecture before any code is built |
+| **3. Build** | 07. Implement | `/speckit.sf.implement` | **Developer** | Autonomous building with auto-healing test loop |
+| | 08. Verify | `/speckit.sf.verify` | **Developer** | Formal evidence generation, PMD/DFA static analysis & test coverage |
+| | 09. PR | `/speckit.sf.pr` | **Developer** | Automated Pull Request creation with embedded verification evidence |
+| **4. Test** | 10. QA | `/speckit.sf.qa` | **QA Engineer** | Multi-persona validation, security matrices & FLS enforcement |
+| | 11. UAT | `/speckit.sf.uat` | **Business Product Owner (BPO)** | Business value verification & user acceptance sign-off in sandbox |
+| | 12. Regression | `/speckit.sf.regression` | **QA Engineer** | Platform sanity & cross-story regression test execution |
+| | 13. Score | `/speckit.sf.score` | **Lead / Architect** | 555-point quality dashboard evaluation across all stories |
+| **5. Deploy**| 14. Deploy | `/speckit.sf.deploy` | **Architect / Release Manager** | Multi-environment promotion gateway (Dev → QA → UAT → Prod) |
+| | 15. Release Notes| `/speckit.sf.release-notes`| **TPO** | Automated generation of business-ready release documentation |
+
+> [!TIP]
+> **The "Mother Story" (Story 00) Scaffolding Pattern**:
+> For multi-developer teams, `/speckit.sf.stories` automatically generates `00-shell.md` as the initial scaffolding story. It deploys foundational metadata (Objects, Fields, PermSets) and compiles skeleton class headers/interfaces *first*. This establishes an immutable architectural contract, allowing multiple developers to build their implementation stories in parallel without compilation blockers.
+
+### Role Accountability Summary
+* **Technical Product Owner (TPO)**: Governs business intent, approves architectural plans, validates UAT, and issues release notes.
+* **Salesforce Architect**: Enforces constitution guardrails, authors blueprints & blast radius maps, and oversees production promotions.
+* **Developer**: Executes story implementation with autonomous self-healing loops and produces verification evidence.
+* **QA Engineer**: Validates security matrices across profiles/permission sets and manages regression test suites.
+* **Business Product Owner (BPO)**: Validates functional business criteria before deployment.
+* **Release Manager (RM) / Lead**: Audits quality scores and coordinates cross-environment release pipelines.
+
 ---
 
 ## ⚡ Prerequisites
