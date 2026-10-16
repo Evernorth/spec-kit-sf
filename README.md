@@ -251,7 +251,9 @@ sfdx-project.json                       # Core Salesforce DX Configuration
 
 * **Sumanth Yanamala** ([LinkedIn](https://www.linkedin.com/in/ysumanth/)), Salesforce Architect, Evernorth
 
-This framework is a contribution to the global Salesforce community. SFSpeckit is shared as a way to give back to the ecosystem. Special thanks to my wife, **Srija**, for her unwavering support, understanding, and patience throughout this journey.
+This framework is a contribution to the global Salesforce community. SFSpeckit is shared as a way to give back to the ecosystem.
+
+Special thanks to my wife, **Srija**, for her unwavering support, understanding, and patience throughout this journey.
 
 ---
 
