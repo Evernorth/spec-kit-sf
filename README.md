@@ -253,8 +253,6 @@ sfdx-project.json                       # Core Salesforce DX Configuration
 
 This framework is a contribution to the global Salesforce community. SFSpeckit is shared as a way to give back to the ecosystem.
 
-Special thanks to my wife, **Srija**, for her unwavering support, understanding, and patience throughout this journey.
-
 ---
 
 ## ⚖️ License
