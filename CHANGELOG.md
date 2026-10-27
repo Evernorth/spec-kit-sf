@@ -3,7 +3,15 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
-## [2.0.0] - 2026-10-27
+## [2.0.1] - 2026-10-27
+
+### Changed
+- **Evernorth OSS Migration**: Formally migrated repository ownership to Evernorth Open Source Software (`Evernorth/spec-kit-sf`) under the Apache License 2.0.
+- **Terminology Standardization**: Replaced all occurrences of legacy scaffolding references with standardized "Story 00" nomenclature across all commands, templates, and documentation.
+- **Security & Compliance Guardrails**: Added credential masking and enterprise HIPAA/PHI log protection to verification telemetry.
+- **Code Analyzer v5**: Verified full compatibility with Salesforce Code Analyzer v5 (`@salesforce/plugin-code-analyzer`).
+
+## [2.0.0] - 2026-07-21
 
 ### Added
 - **New Command**: `/speckit.sf.analyze` — pre-implementation analysis with Story 00 lineage, component scope mapping, and org drift detection via `sf project retrieve preview`.

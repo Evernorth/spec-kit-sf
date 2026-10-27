@@ -3,7 +3,7 @@ schema_version: "1.0"
 extension:
   id: "sf"
   name: "SFSpeckit — Salesforce Spec-Driven Development"
-  version: "2.0.0"
+  version: "2.0.1"
   description: "Enterprise Salesforce SDLC with 19 commands for the full SDD lifecycle."
   author: "Sumanth Yanamala / Evernorth"
   repository: "https://github.com/Evernorth/spec-kit-sf"
