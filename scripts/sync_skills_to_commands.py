@@ -39,7 +39,7 @@ COMMAND_DESCRIPTIONS = {
     "clarify": "Analyze the feature specification for gaps and edge cases with stakeholder sign-off.",
     "plan": "Create a technical plan with force-app structure and blast radius analysis.",
     "stories": "Generate Jira-ready developer stories with security matrices.",
-    "analyze": "Pre-implementation analysis with mother story context and org drift detection.",
+    "analyze": "Pre-implementation analysis with Story 00 context and org drift detection.",
     "implement": "Implement a story file with auto-heal loop and scoring gates.",
     "review": "TPO and Architect review of generated stories before Jira creation.",
     "verify": "Generate formal Verification Evidence documents with coverage metrics.",

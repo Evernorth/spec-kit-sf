@@ -1,5 +1,5 @@
 ---
-description: "Pre-implementation analysis with mother story context and org drift detection."
+description: "Pre-implementation analysis with Story 00 context and org drift detection."
 ---
 
 # Pre-Implementation Analysis
@@ -23,10 +23,10 @@ Before executing, you may check for any installed agent skills related to:
 
 ## Instructions
 
-### Step 1: Mother Story & Lineage Check
+### Step 1: Story 00 & Lineage Check
 
 1. Read the feature's `plan.md` and the provided story file.
-2. Determine if this is the "Mother Story" (the first story in the feature, e.g., Story-000).
+2. Determine if this is "Story 00" (the initial scaffolding story in the feature, e.g., Story-000 or 00-shell).
    - If YES: Note that no previous components exist for this feature.
    - If NO: Identify all prior completed stories in this feature. List the exact Salesforce components (Apex, Objects, LWCs) they created or modified.
 
@@ -55,7 +55,7 @@ Check if any components within the story scope have been modified directly in th
 ### Step 4: Generate Pre-Flight Report
 
 Summarize the findings:
-- Is Mother Story: [Yes/No]
+- Is Story 00: [Yes/No]
 - Component Lineage: [List of existing components from prior stories]
 - Current Story Scope: [List of components to touch]
 - Drift Detected: [List of conflicting components, or "None"]

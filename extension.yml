@@ -52,7 +52,7 @@ provides:
 
     - name: "speckit.sf.analyze"
       file: "commands/analyze.md"
-      description: "Pre-implementation analysis with mother story context and org drift detection."
+      description: "Pre-implementation analysis with Story 00 context and org drift detection."
 
     - name: "speckit.sf.implement"
       file: "commands/implement.md"
