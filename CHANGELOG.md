@@ -13,7 +13,9 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - **Salesforce Code Analyzer v5 Support**: Full integration with PMD 7 and DFA scanner engines.
 - **Auto-Heal Implementation Loop**: Added automated remediation logic to `/speckit.sf.implement` (up to 3 retries).
 - **Blast Radius Analysis**: Integrated CLI-driven dependency mapping in `/speckit.sf.plan` to prevent architectural regressions.
-- **18 Lifecycle Commands**: Complete coverage from Project Constitution to Multi-org Deployment and UAT.
+- **19 Lifecycle Commands**: Complete coverage including Pre-Implementation Analysis (`/speckit.sf.analyze`), Project Constitution, Multi-org Deployment, and UAT.
+- **Bundled Lifecycle Templates**: 9 standardized markdown templates under `templates/` for specs, technical plans, clarify reports, stories, hotfixes, and test scripts.
+- **Skill-to-Command Sync**: Synchronization utility (`scripts/sync_skills_to_commands.py`) to maintain alignment between skills and extension commands.
 - **Zero-Dependency Mode**: Removed requirement for external foundational skills; all best-practice knowledge is now embedded in the extension documentation.
 
 ### Fixed

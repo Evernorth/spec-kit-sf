@@ -190,7 +190,7 @@ The `/speckit.sf.setup` command automatically inspects and validates:
 
 ---
 
-## 📋 Slash Commands (18 Complete Lifecycle Tools)
+## 📋 Slash Commands (19 Complete Lifecycle Tools)
 
 | Command | Persona | Purpose |
 | :--- | :--- | :--- |
@@ -200,6 +200,7 @@ The `/speckit.sf.setup` command automatically inspects and validates:
 | `/speckit.sf.clarify` | Arch | **[DRIFT ALERT]** Deep gap analysis checklist and drift audit. |
 | `/speckit.sf.plan` | Arch | Technical blueprint, `force-app` structure, and blast radius analysis. |
 | `/speckit.sf.stories` | Arch | Break plan into Jira-ready developer stories with security matrices. |
+| `/speckit.sf.analyze` | Dev | **[PRE-FLIGHT]** Pre-implementation analysis with mother story context and org drift detection. |
 | `/speckit.sf.implement` | Dev | **[AUTO-HEAL]** Build story with automated remediation loops (up to 3 retries). |
 | `/speckit.sf.review` | TPO/Arch | TPO and Architect review of generated stories before Jira creation. |
 | `/speckit.sf.verify` | Dev | Generate formal Verification Evidence documents with coverage metrics. |

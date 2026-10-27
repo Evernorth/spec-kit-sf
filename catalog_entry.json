@@ -27,7 +27,7 @@
       ]
     },
     "provides": {
-      "commands": 18,
+      "commands": 19,
       "hooks": 2
     },
     "tags": [
