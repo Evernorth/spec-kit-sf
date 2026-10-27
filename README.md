@@ -13,7 +13,7 @@
 [![Featured at Dreamforce '26](docs/assets/badges/dreamforce.svg)](https://www.salesforce.com/plus/experience/dreamforce_2026/series/developers_at_dreamforce_2026/episode/episode-s1e17)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Evernorth-orange.svg)](https://github.com/Evernorth/spec-kit-sf)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Evernorth/spec-kit-sf/pulls)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.0.0-green.svg)](CHANGELOG.md)
 
 </div>
 
@@ -170,7 +170,7 @@ specify extension add sf --from https://github.com/Evernorth/spec-kit-sf
 _For specific releases:_
 
 ```bash
-specify extension add sf --from https://github.com/Evernorth/spec-kit-sf/archive/refs/tags/v1.0.0.zip
+specify extension add sf --from https://github.com/Evernorth/spec-kit-sf/archive/refs/tags/v2.0.0.zip
 ```
 
 ### Step 3: Automated Environment Setup & Verification
