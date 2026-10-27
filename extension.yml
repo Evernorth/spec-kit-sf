@@ -3,8 +3,8 @@ schema_version: "1.0"
 extension:
   id: "sf"
   name: "SFSpeckit — Salesforce Spec-Driven Development"
-  version: "1.0.0"
-  description: "Enterprise Salesforce SDLC with 18 commands for the full SDD lifecycle."
+  version: "2.0.1"
+  description: "Enterprise Salesforce SDLC with 19 commands for the full SDD lifecycle."
   author: "Sumanth Yanamala / Evernorth"
   repository: "https://github.com/Evernorth/spec-kit-sf"
   license: "Apache-2.0"
@@ -49,6 +49,10 @@ provides:
     - name: "speckit.sf.stories"
       file: "commands/stories.md"
       description: "Generate Jira-ready developer stories with security matrices."
+
+    - name: "speckit.sf.analyze"
+      file: "commands/analyze.md"
+      description: "Pre-implementation analysis with Story 00 context and org drift detection."
 
     - name: "speckit.sf.implement"
       file: "commands/implement.md"

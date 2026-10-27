@@ -3,6 +3,38 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## [2.0.1] - 2026-10-27
+
+### Changed
+- **Evernorth OSS Migration**: Formally migrated repository ownership to Evernorth Open Source Software (`Evernorth/spec-kit-sf`) under the Apache License 2.0.
+- **Terminology Standardization**: Replaced all occurrences of legacy scaffolding references with standardized "Story 00" nomenclature across all commands, templates, and documentation.
+- **Security & Compliance Guardrails**: Added credential masking and enterprise HIPAA/PHI log protection to verification telemetry.
+- **Code Analyzer v5**: Verified full compatibility with Salesforce Code Analyzer v5 (`@salesforce/plugin-code-analyzer`).
+
+## [2.0.0] - 2026-07-21
+
+### Added
+- **New Command**: `/speckit.sf.analyze` — pre-implementation analysis with Story 00 lineage, component scope mapping, and org drift detection via `sf project retrieve preview`.
+- **Bundled Templates**: Shipped 9 Salesforce SDD templates in `templates/` (constitution, spec, plan, story, clarify, clarification report, QA test scripts, UAT scripts, hotfix).
+- **Sync Tooling**: Added `scripts/sync_skills_to_commands.py` to maintain alignment between skills and extension commands.
+- **Setup Enhancements**: `/speckit.sf.setup` now initializes `.specify/` directories and copies bundled templates on first run.
+
+### Changed
+- **Full Skill Sync**: All 18 lifecycle commands updated from the latest standalone SFSpeckit skills, adapted for the Spec Kit extension format (`.specify/` paths, `/speckit.sf.*` commands, optional accelerator discovery).
+- **Code Analyzer v5**: Migrated all scanner references to `@salesforce/plugin-code-analyzer` and `sf code-analyzer run`.
+- **Implement Workflow**: Deploy-before-commit guardrail, standardized branch naming, API limit kill switch in auto-heal loop, and expanded scoring gate validation.
+- **Verify Workflow**: Pre-verification deployment guardrails, runtime telemetry analysis, and formal evidence document template with HIPAA log protection.
+- **Deploy Workflow**: Destructive changes human-in-the-loop gate and automated rollback strategy for phased deployments.
+- **PR Workflow**: Code Analyzer v5 security scan, DFA analysis, and scanner penalty scoring.
+- **Clarify Workflow**: Expanded stakeholder sign-off report with org drift audit and deep business gap analysis.
+- **Plan Workflow**: CLI-driven blast radius / impact analysis via Tooling API dependency queries.
+- **Extension Manifest**: Bumped to 19 commands; updated command descriptions to match latest capabilities.
+- **README**: Updated lifecycle diagram and command table to include `/speckit.sf.analyze` in the build phase.
+
+### Fixed
+- **Terminology Alignment**: Standardized all scaffolding references to Story 00 across all documents and commands.
+- **Template Paths**: Corrected template references from `.agents/skills/` to `.specify/templates/` across all commands.
+
 ## [1.0.0] - 2026-04-13
 
 ### Added

@@ -13,7 +13,7 @@
 [![Featured at Dreamforce '26](docs/assets/badges/dreamforce.svg)](https://www.salesforce.com/plus/experience/dreamforce_2026/series/developers_at_dreamforce_2026/episode/episode-s1e17)
 [![Open Source](https://img.shields.io/badge/Open%20Source-Evernorth-orange.svg)](https://github.com/Evernorth/spec-kit-sf)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Evernorth/spec-kit-sf/pulls)
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](CHANGELOG.md)
+[![Version](https://img.shields.io/badge/version-2.0.1-green.svg)](CHANGELOG.md)
 
 </div>
 
@@ -122,8 +122,8 @@ SFSpeckit structures the Salesforce delivery lifecycle into 5 distinct phases wi
 | | 15. Release Notes| `/speckit.sf.release-notes`| **TPO** | Automated generation of business-ready release documentation |
 
 > [!TIP]
-> **The "Mother Story" (Story 00) Scaffolding Pattern**:
-> For multi-developer teams, `/speckit.sf.stories` automatically generates `00-shell.md` as the initial scaffolding story. It deploys foundational metadata (Objects, Fields, PermSets) and compiles skeleton class headers/interfaces *first*. This establishes an immutable architectural contract, allowing multiple developers to build their implementation stories in parallel without compilation blockers.
+> **The Story 00 Scaffolding Pattern**:
+> For multi-developer teams, `/speckit.sf.stories` automatically generates `00-shell.md` as the initial scaffolding story (Story 00). It deploys foundational metadata (Objects, Fields, PermSets) and compiles skeleton class headers/interfaces *first*. This establishes an immutable architectural contract, allowing multiple developers to build their implementation stories in parallel without compilation blockers.
 
 ### Role Accountability Summary
 * **Technical Product Owner (TPO)**: Governs business intent, approves architectural plans, validates UAT, and issues release notes.
@@ -170,7 +170,7 @@ specify extension add sf --from https://github.com/Evernorth/spec-kit-sf
 _For specific releases:_
 
 ```bash
-specify extension add sf --from https://github.com/Evernorth/spec-kit-sf/archive/refs/tags/v1.0.0.zip
+specify extension add sf --from https://github.com/Evernorth/spec-kit-sf/archive/refs/tags/v2.0.1.zip
 ```
 
 ### Step 3: Automated Environment Setup & Verification
@@ -190,7 +190,7 @@ The `/speckit.sf.setup` command automatically inspects and validates:
 
 ---
 
-## 📋 Slash Commands (18 Complete Lifecycle Tools)
+## 📋 Slash Commands (19 Complete Lifecycle Tools)
 
 | Command | Persona | Purpose |
 | :--- | :--- | :--- |
@@ -200,6 +200,7 @@ The `/speckit.sf.setup` command automatically inspects and validates:
 | `/speckit.sf.clarify` | Arch | **[DRIFT ALERT]** Deep gap analysis checklist and drift audit. |
 | `/speckit.sf.plan` | Arch | Technical blueprint, `force-app` structure, and blast radius analysis. |
 | `/speckit.sf.stories` | Arch | Break plan into Jira-ready developer stories with security matrices. |
+| `/speckit.sf.analyze` | Dev | **[PRE-FLIGHT]** Pre-implementation analysis with Story 00 context and org drift detection. |
 | `/speckit.sf.implement` | Dev | **[AUTO-HEAL]** Build story with automated remediation loops (up to 3 retries). |
 | `/speckit.sf.review` | TPO/Arch | TPO and Architect review of generated stories before Jira creation. |
 | `/speckit.sf.verify` | Dev | Generate formal Verification Evidence documents with coverage metrics. |
@@ -229,7 +230,7 @@ SFSpeckit organizes all SDD artifacts inside the `.specify` directory to maintai
 │       ├── plan.md                     # Technical Blueprint & Blast Radius
 │       ├── verification-evidence.md    # Automated Evidence & Test Metrics
 │       └── stories/                    # Developer Work Units
-│           ├── 00-shell.md             # Mother Story (Metadata & Skeletons)
+│           ├── 00-shell.md             # Story 00 (Metadata & Skeletons)
 │           └── 01-logic.md             # Implementation Story
 ├── extensions/
 │   └── sf/                             # Extension Config
